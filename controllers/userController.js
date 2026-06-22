@@ -1,7 +1,7 @@
 const db =
 require("../database/connection");
 
-const bcryptjs =
+const bcrypt =
 require("bcryptjs");
 
 exports.alterarSenha = async (req, res) => {
