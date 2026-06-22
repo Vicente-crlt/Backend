@@ -54,17 +54,12 @@ app.get("/", (req,res)=>{
     });
 
 });
+const PORT = process.env.PORT || 3000;
 
-app.listen(
+app.listen(PORT, () => {
 
-    process.env.PORT,
+    console.log(
+        `Servidor rodando na porta ${PORT}`
+    );
 
-    ()=>{
-
-        console.log(
-            `Servidor rodando na porta ${process.env.PORT}`
-        );
-
-    }
-
-);
+});
