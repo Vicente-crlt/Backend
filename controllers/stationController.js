@@ -50,6 +50,7 @@ exports.updateLocation = async (req,res)=>{
     const {
 
         id,
+        nome,
         latitude,
         longitude,
         bikes
@@ -67,12 +68,14 @@ exports.updateLocation = async (req,res)=>{
             longitude = ?,
             bikes = ?
             WHERE id = ?
+            nome = ?
             `,
 
             [
                 latitude,
                 longitude,
                 bikes,
+                nome,
                 id
             ]
 
