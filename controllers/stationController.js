@@ -61,26 +61,25 @@ exports.updateLocation = async (req,res)=>{
 
         await db.query(
 
-            `
-            UPDATE estacoes
-            SET
-            latitude = ?,
-            longitude = ?,
-            bikes = ?
-            WHERE id = ?
-            nome = ?
-            `,
+    `
+    UPDATE estacoes
+    SET
+    nome = ?,
+    latitude = ?,
+    longitude = ?,
+    bikes = ?
+    WHERE id = ?
+    `,
 
-            [
-                latitude,
-                longitude,
-                bikes,
-                nome,
-                id
-            ]
+    [
+        nome,
+        latitude,
+        longitude,
+        bikes,
+        id
+    ]
 
-        );
-
+);
         res.json({
 
             success:true
